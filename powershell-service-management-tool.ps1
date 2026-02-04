@@ -2,21 +2,21 @@
 # | CONFIGURATION - Change only this section | #
 # -------------------------------------------- # 
 
-# Regions
+# Regions - put the name of the servers in specific region
 $serverMap = @{
     'EMEA' = @('Server1', 'Server2')  
     'AMERICA' = @('Server3')            
     'ASIA' = @('Server4','Server5','Server6')                 
 }
 
-# Environments
+# Environments - put the name(s) of the services that you want to be controlled by the script
 $envMap = @{ 
     'TEST' = @('ServiceName_TEST*')
     'TRAIN' = @('ServiceName_TRAIN*')
     'UAT' = @('ServiceName_UAT*')
 }
 
-# Untouchable Services
+# Untouchable Services - the script will skip those services
 $excludeServices = @(
     'ServiceName1', 'ServiceName2', 'ServiceName3', 'ServiceName4'
 )
@@ -165,3 +165,4 @@ foreach ($server in $servers) {
 }
 
 Write-Host "`nDONE!" -ForegroundColor DarkCyan
+
